@@ -1,0 +1,107 @@
+<header>
+    <nav class="w-screen h-20 fixed top-0 z-50 text-black shadow-lg bg-brown" id="nav">
+        <div class="flex flex-row justify-between items-center p-4 relative h-full">
+            <a class="w-full block cursor-pointer" routerLink="/" class="h-full">
+                <img class="h-full" src="/assets/imgs/logo white.png" alt="" id="logo" routerLink="'/'">
+            </a>
+            <!-- Menu mobile -->
+            <svg id="burger" viewBox="0 0 100 100" data-status="close" class="h-full p-2" (click)="toggleMenu()">
+                <circle cx="10" cy="10" r="10" fill="CurrentColor" />
+                <rect class="origin-tRect" id="tRect" x="10" y="0" width="80" height="20" transform="rotate(0)" fill="CurrentColor" />
+                <circle id="trC" cx="90" cy="10" r="10" fill="CurrentColor" />
+                <!-- ================================================================================= -->
+                <g id="middle">
+                    <circle cx="10" cy="50" r="10" fill="CurrentColor" />
+                    <rect x="10" y="40" width="80" height="20" fill="CurrentColor" />
+                    <circle cx="90" cy="50" r="10" fill="CurrentColor" />   
+                </g>
+                <!-- ================================================================================= -->
+                <circle cx="10" cy="90" r="10" fill="CurrentColor" />
+                <rect class="origin-bRect" id="bRect" x="10" y="80" width="80" height="20" fill="CurrentColor" />
+                <circle id="brC" cx="90" cy="90" r="10" fill="CurrentColor" />   
+                
+                <!-- ============================================================================================================= -->
+        
+                <animate id="stage1" xlink:href="#trC" attributeName="cy" from="10" to="90" dur="0.3s" begin="none" fill="freeze"/>
+                <animate xlink:href="#tRect" attributeName="width" from="80" to="113" dur="0.3s" begin="stage1.begin" fill="freeze"/>
+                <animateTransform xlink:href="#tRect" attributeName="transform" type="rotate" from="0" to="45" dur="0.3s" begin="stage1.begin" fill="freeze"
+                values="0;22.5;45"
+                keyTimes="0;0.4;1"/>
+        
+                <animate xlink:href="#middle" attributeName="fill-opacity" begin="stage1.begin" from="1" to="0" fill="freeze" dur="0.15s"/>
+                
+                <animate xlink:href="#brC" attributeName="cy" from="90" to="10" dur="0.3s" begin="stage1.begin" fill="freeze" />
+                <animate xlink:href="#bRect" attributeName="width" from="80" to="113" dur="0.3s" begin="stage1.begin" fill="freeze" />
+                <animateTransform xlink:href="#bRect" attributeName="transform" type="rotate" from="0" to="-45" dur="0.3s" begin="stage1.begin" fill="freeze"
+                values="0;-22.5;-45"
+                keyTimes="0;0.4;1"/>
+        
+                <!-- ============================================================================================================= -->
+        
+                <animate id="stage2" xlink:href="#trC" attributeName="cy" from="90" to="10" dur="0.3s" begin="none" fill="freeze"/>
+                <animate xlink:href="#tRect" attributeName="width" from="113" to="80" dur="0.3s" begin="stage2.begin" fill="freeze"/>
+                <animateTransform xlink:href="#tRect" attributeName="transform" type="rotate" from="45" to="0" dur="0.3s" begin="stage2.begin" fill="freeze"
+                values="45;22.5;0"
+                keyTimes="0;0.6;1"/>
+        
+                <animate xlink:href="#middle" attributeName="fill-opacity" begin="stage2.begin + 0.15s" from="0" to="1" fill="freeze" dur="0.15s"/>
+                
+                <animate xlink:href="#brC" attributeName="cy" from="10" to="90" dur="0.3s" begin="stage2.begin" fill="freeze" id="btC" />
+                <animate xlink:href="#bRect" attributeName="width" from="113" to="80" dur="0.3s" begin="stage2.begin" fill="freeze" />
+                <animateTransform xlink:href="#bRect" attributeName="transform" type="rotate" from="-45" to="0" dur="0.3s" begin="stage2.begin" fill="freeze"
+                values="-45;-22.5;0"
+                keyTimes="0;0.6;1"/>
+            </svg>
+        
+            <div id="menu" class="flex rotate-0 absolute bg-white text-black w-screen left-0 top-20 h-menuMobile capitalize text-3xl font-roboto pl-10 p-2 pt-5 flex-col">
+                <a class="w-full block cursor-pointer" routerLink='/'>accueil</a>
+                
+                <ul class="mt-5">
+                    <li class="relative">
+                        <div class="dropButton rotate-180 duration-300 ease-linear absolute top-0 bottom-0 my-auto -left-8 w-8 h-8 origin-center">
+                            <span class="iconify h-full w-full" data-icon="fluent:triangle-16-filled"></span>
+                        </div>
+                        <a class="w-full block cursor-pointer" routerLink="/guitares">guitares</a>
+                    </li>
+                    <li class="dropDown flex flex-col gap-3 overflow-hidden duration-300 ease-linear" data-status="close">
+                        <hr class="mt-4 border-1 border-black">
+                        <ul class="mt-3 pl-8 flex flex-col gap-3">
+                            <li>
+                                <a class="w-full block cursor-pointer" routerlink="/guitares" fragment="realisations">réalisations</a>
+                            </li>
+                            <li>
+                                <a class="w-full block cursor-pointer" routerlink="/guitares" fragment="fabrication">fabrication</a>
+                            </li>
+                            <li>
+                                <a class="w-full block cursor-pointer" routerlink="/guitares" fragment="entretien">entretien</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="mt-5">
+                    <li class="relative">
+                        <div class="dropButton rotate-180 duration-300 ease-linear absolute top-0 bottom-0 my-auto -left-8 w-8 h-8 origin-center">
+                            <span class="iconify h-full w-full" data-icon="fluent:triangle-16-filled"></span>
+                        </div>
+                        <a class="w-full block cursor-pointer" routerLink="/couteaux">coutellerie</a>
+                    </li>
+                    <li class="dropDown flex flex-col gap-3 overflow-hidden duration-300 ease-linear" data-status="close">
+                        <hr class="mt-4 border-1 border-black">
+                        <ul class="mt-3 pl-8 flex flex-col gap-3">
+                            <li>
+                                <a class="w-full block cursor-pointer" routerlink="/couteaux" fragment="realisations">réalisations</a>
+                            </li>
+                            <li>
+                                <a class="w-full block cursor-pointer" routerlink="/couteaux" fragment="fabrication">fabrication</a>
+                            </li>
+                            <li>
+                                <a class="w-full block cursor-pointer" routerlink="/couteaux" fragment="entretien">entretien</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="mt-5" routerLink='/'>contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
