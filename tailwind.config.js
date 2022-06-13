@@ -16,6 +16,7 @@ module.exports = {
       },
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif'],
+        'serif': ['Times New Roman', 'serif'],
       },
       colors: {
         'brown': "rgb(181,136,96 )",
@@ -68,14 +69,14 @@ module.exports = {
       },
       dropShadow: {
         'icon': [
-          '1px 1px 4px rgba(255, 255, 255, 0.5)',
-          '1px 0px 4px rgba(255, 255, 255, 0.5)',
-          '1px -1px 4px rgba(255, 255, 255, 0.5)',
-          '0px -1px 4px rgba(255, 255, 255, 0.5)',
-          '-1px -1px 4px rgba(255, 255, 255, 0.5)',
-          '-1px -0px 4px rgba(255, 255, 255, 0.5)',
-          '-1px 1px 4px rgba(255, 255, 255, 0.5)',
-          '0px 1px 4px rgba(255, 255, 255, 0.5)'
+          '1px 1px 2px rgba(255, 255, 255, 0.5)',
+          '1px 0px 2px rgba(255, 255, 255, 0.5)',
+          '1px -1px 2px rgba(255, 255, 255, 0.5)',
+          '0px -1px 2px rgba(255, 255, 255, 0.5)',
+          '-1px -1px 2px rgba(255, 255, 255, 0.5)',
+          '-1px -0px 2px rgba(255, 255, 255, 0.5)',
+          '-1px 1px 2px rgba(255, 255, 255, 0.5)',
+          '0px 1px 2px rgba(255, 255, 255, 0.5)'
         ],
       },
       inset: {
