@@ -1,5 +1,5 @@
 <main class="mt-20">
-    <ul id="list" class="w-full flex flex-row flex-wrap justify-around pt-10">
+    <ul id="list" class="w-full flex flex-row flex-wrap justify-around pt-10 gap-3">
         <li *ngFor="let product of products" class="flex flex-col justify-center gap-2 w-8/20">
             <img src="{{product.images[0]}}" alt="" class="object-cover h-full w-full">
             <a routerLink="/guitare/{{product.id}}" class="nm-flat-brown-xs px-2 py-1 rounded-lg cursor-pointer w-15/20 text-center mx-auto">Voir +</a>

@@ -1,14 +1,18 @@
-<main class="mt-20 p-3 pt-8 flex flex-col gap-y-5 w-full">
-    <h1 class="text-brown font-serif text-center text-5xl">{{product.title}}</h1>
+<main class="mt-20 p-3 pt-8 flex flex-col gap-y-5 w-full font-serif text-xl">
+    <h1 class="text-brown text-center text-5xl">{{product.title}}</h1>
     <div>
         <img *ngFor="let img of product.images" src="{{img}}" alt="" class="w-14/20 mx-auto">
     </div>
     <div *ngIf="product.description">
         <p>{{product.description}}</p>
     </div>
-    <iframe *ngIf="product.video" [src]="product.video | safe" class="e2e-iframe-trusted-src"></iframe>
-    <div *ngIf="product.caracteristics" class="font-serif text-xl">
-        <h2 class="text-center">Caractéristiques :</h2>
+    <div *ngIf="product.video" >
+        <h2 class="text-center mb-4">Démonstration :</h2>
+        <iframe [src]="product.video | safe" class="mx-auto"></iframe>
+    </div>
+    
+    <div *ngIf="product.caracteristics">
+        <h2 class="text-center mb-4">Caractéristiques :</h2>
         <table class="mx-auto">
             <tr *ngFor="let caracteristic of product.caracteristics" class="bg-blue-200 even:bg-white">
                 <td class="text-left">{{caracteristic.name}}</td>
@@ -17,6 +21,6 @@
         </table>
     </div>
     <div class="text-center mx-auto flex flex-col gap-y-2" *ngIf="product.file">
-        <a class="nm-flat-brown rounded-xl py-2 px-4 text-xl" href="{{product.file}}" target="_blank">Télécharger la fiche</a>
+        <a class="nm-flat-brown rounded-xl py-2 px-4" href="{{product.file}}" target="_blank">Télécharger la fiche</a>
     </div>
 </main>

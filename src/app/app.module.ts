@@ -11,6 +11,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { ProductListComponent } from './component/product-list/product-list.component';
 import { GuitareListComponent } from './pages/guitare-list/guitare-list.component';
 import { SafePipe } from './pipes/safe/safe.pipe';
+import { ExplanationComponent } from './component/explanation/explanation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SafePipe } from './pipes/safe/safe.pipe';
     FooterComponent,
     ProductListComponent,
     GuitareListComponent,
-    SafePipe
+    SafePipe,
+    ExplanationComponent
   ],
   imports: [
     BrowserModule,

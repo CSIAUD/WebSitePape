@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { Caracteristics } from 'src/app/model/caracteristics/caracteristics';
 import { Guitare } from 'src/app/model/guitare/guitare';
 import { environment } from 'src/environments/environment';
