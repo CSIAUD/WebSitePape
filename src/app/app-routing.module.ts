@@ -7,12 +7,14 @@ const routes: Routes = [
   { path: "", redirectTo: "guitares", pathMatch: "full"},
   { path: "guitare/:id", component: GuitareComponent},
   { path: "guitares", component: GuitareListComponent},
+  { path: "guitares/:exp", component: GuitareListComponent},
   { path: "**", redirectTo: "guitares"},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'enabled',
+    onSameUrlNavigation: 'reload',
     anchorScrolling: 'enabled',
     scrollOffset: [0, 64], // [x, y]
     useHash: true

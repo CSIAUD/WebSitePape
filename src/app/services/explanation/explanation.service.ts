@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Explanation } from 'src/app/model/explanation/explanation';
+import { Link } from 'src/app/model/link/link';
 import { environment } from 'src/environments/environment';
 
 const parseJSON = (resp: any) => (resp.json ? resp.json() : resp);
@@ -59,5 +60,34 @@ export class ExplanationsService {
       // this.error = error;
     }
     return explanations;
+  }
+
+  public getLinks(page: string): Link[] {
+    let links: Array<Link> = [];
+
+    try {
+      fetch(`${this.explanationUrl}?filters[page][$eq]=${page}&populate=*`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then((val) => {
+          for(let item of val.data){
+            let itemTemp = new Link;
+            itemTemp.ref = "exp" + item['id'];
+            item = item['attributes'];
+            itemTemp.title = item['title'];
+            links.push(itemTemp);
+          }
+          return links;
+        });
+    } catch (error) {
+      console.log("Erreur fetch")
+      // this.error = error;
+    }
+    return links;
   }
 }

@@ -9,6 +9,7 @@ import { GuitareService } from 'src/app/services/guitareService/guitare-service.
   styleUrls: ['./guitare-list.component.css']
 })
 export class GuitareListComponent implements OnInit {
+  anchor = ''
 
   public guitares: Guitare [] = [];
   myDestroy: Subject<any> = new Subject<any>();
