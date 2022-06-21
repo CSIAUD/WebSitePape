@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Guitare } from 'src/app/model/guitare/guitare';
-import { GuitareService } from 'src/app/services/guitareService/guitare-service.service';
+import { GuitareService } from 'src/app/services/guitareService/guitare.service';
 
 @Component({
   selector: 'app-guitare-list',
@@ -9,8 +9,7 @@ import { GuitareService } from 'src/app/services/guitareService/guitare-service.
   styleUrls: ['./guitare-list.component.css']
 })
 export class GuitareListComponent implements OnInit {
-  anchor = ''
-
+  
   public guitares: Guitare [] = [];
   myDestroy: Subject<any> = new Subject<any>();
   constructor(private guitareService:GuitareService) {}

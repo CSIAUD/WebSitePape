@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { Guitare } from 'src/app/model/guitare/guitare';
-import { GuitareService } from 'src/app/services/guitareService/guitare-service.service';
+import { GuitareService } from 'src/app/services/guitareService/guitare.service';
 
 @Component({
   selector: 'app-guitare',

@@ -66,7 +66,7 @@ export class ExplanationsService {
     let links: Array<Link> = [];
 
     try {
-      fetch(`${this.explanationUrl}?filters[page][$eq]=${page}&populate=*`, {
+      fetch(`${this.explanationUrl}?filters[page][$eq]=${page}&sort[0]=order&populate=*`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

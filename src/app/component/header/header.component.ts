@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Link } from 'src/app/model/link/link';
-import { ExplanationsService } from 'src/app/services/explanation/explanation.service';
 
 @Component({
   selector: 'app-header',
@@ -11,9 +10,7 @@ export class HeaderComponent implements OnInit {
 
   public guitareLinks: Link [] = [];
 
-  constructor(private explanationService:ExplanationsService) {
-    this.guitareLinks = this.explanationService.getLinks("guitare")
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.initMenu();

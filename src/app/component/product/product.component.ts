@@ -8,9 +8,7 @@ import { AfterViewChecked, Component, Input } from '@angular/core';
 export class ProductComponent implements AfterViewChecked {
   @Input() product: any;
 
-
-  constructor() {
-  }
+  constructor() {}
 
   ngAfterViewChecked(): void {
     resizeIframe()

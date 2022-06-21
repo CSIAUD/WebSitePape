@@ -11,10 +11,10 @@
         <iframe [src]="product.video | safe" class="mx-auto"></iframe>
     </div>
     
-    <div *ngIf="product.caracteristics">
+    <div *ngIf="product.caracteristics" class="w-full">
         <h2 class="text-center mb-4">Caractéristiques :</h2>
-        <table class="mx-auto">
-            <tr *ngFor="let caracteristic of product.caracteristics" class="bg-blue-200 even:bg-white">
+        <table class="mx-auto w-18/20">
+            <tr *ngFor="let caracteristic of product.caracteristics" class="bg-blue-200 even:bg-white w-full">
                 <td class="text-left">{{caracteristic.name}}</td>
                 <td class="text-right">{{caracteristic.value}}</td>
             </tr>

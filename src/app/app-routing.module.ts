@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CouteauListComponent } from './pages/couteau-list/couteau-list.component';
+import { CouteauComponent } from './pages/couteau/couteau.component';
 import { GuitareListComponent } from './pages/guitare-list/guitare-list.component';
 import { GuitareComponent } from './pages/guitare/guitare.component';
 
@@ -7,7 +9,10 @@ const routes: Routes = [
   { path: "", redirectTo: "guitares", pathMatch: "full"},
   { path: "guitare/:id", component: GuitareComponent},
   { path: "guitares", component: GuitareListComponent},
-  { path: "guitares/:exp", component: GuitareListComponent},
+  // { path: "guitares/:exp", component: GuitareListComponent},
+  { path: "couteau/:id", component: CouteauComponent},
+  { path: "couteaux", component: CouteauListComponent},
+  // { path: "guitares/:exp", component: GuitareListComponent},
   { path: "**", redirectTo: "guitares"},
 ];
 

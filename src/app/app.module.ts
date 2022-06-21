@@ -12,6 +12,8 @@ import { ProductListComponent } from './component/product-list/product-list.comp
 import { GuitareListComponent } from './pages/guitare-list/guitare-list.component';
 import { SafePipe } from './pipes/safe/safe.pipe';
 import { ExplanationComponent } from './component/explanation/explanation.component';
+import { CouteauComponent } from './pages/couteau/couteau.component';
+import { CouteauListComponent } from './pages/couteau-list/couteau-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ExplanationComponent } from './component/explanation/explanation.compon
     ProductListComponent,
     GuitareListComponent,
     SafePipe,
-    ExplanationComponent
+    ExplanationComponent,
+    CouteauComponent,
+    CouteauListComponent
   ],
   imports: [
     BrowserModule,
