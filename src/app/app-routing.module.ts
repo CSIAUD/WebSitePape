@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './pages/contact/contact.component';
 import { CouteauListComponent } from './pages/couteau-list/couteau-list.component';
 import { CouteauComponent } from './pages/couteau/couteau.component';
 import { GuitareListComponent } from './pages/guitare-list/guitare-list.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: "guitares", component: GuitareListComponent},
   { path: "couteau/:id", component: CouteauComponent},
   { path: "couteaux", component: CouteauListComponent},
+  { path: "contact", component: ContactComponent},
   { path: "**", redirectTo: "guitares"},
 ];
 
