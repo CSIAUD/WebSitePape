@@ -1,4 +1,5 @@
 import { AfterViewChecked, Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-product-list',
@@ -8,10 +9,17 @@ import { AfterViewChecked, Component, Input, OnInit } from '@angular/core';
 export class ProductListComponent implements AfterViewChecked {
   @Input() location = '';
   @Input() products: any;
+  @Input() sens = '';
+  ratio = 0;
 
   constructor() {}
 
   ngAfterViewChecked(): void {
+    if(this.sens == "horizontal"){
+      this.ratio = environment.ratioHorizontal
+    }else if(this.sens == "vertical"){
+      this.ratio = environment.ratioVertical
+    }
     this.resizeImg();
   }
 
@@ -19,13 +27,7 @@ export class ProductListComponent implements AfterViewChecked {
     let imgs = document.querySelectorAll('#list li>img');
     if(imgs.length > 0){
       imgs.forEach(img => {
-        if(this.location == "guitare"){
-          (img as HTMLElement).dataset['ratio'] = (16/9).toString();
-          (img as HTMLElement).style.height = img.getBoundingClientRect().width * (16/9) + "px"
-        }else{
-          (img as HTMLElement).dataset['ratio'] = (3/4).toString();
-          (img as HTMLElement).style.height = img.getBoundingClientRect().width * (3/4) + "px"
-        }
+        (img as HTMLElement).style.height = img.getBoundingClientRect().width * this.ratio + "px"
       })
     }
   }

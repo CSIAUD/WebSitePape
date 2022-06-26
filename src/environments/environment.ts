@@ -4,7 +4,13 @@
 
 export const environment = {
   production: false,
+  ratioVertical: 8/5,
+  ratioHorizontal: 3/4,
+  // Ynov
+  // apiURL: "http://10.13.33.61:1337" 
+  // Trets
   apiURL: "http://176.181.188.13:1337"
+  // Local
   // apiURL: "http://localhost:1337"
 };
 
