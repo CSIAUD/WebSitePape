@@ -65,7 +65,6 @@ export class ProductComponent implements AfterViewChecked {
       setTimeout(() => {
         this.carousselLoop(delay, anim);
       }, 100);
-      console.log("NOPE")
     }
   }
 }

@@ -9,9 +9,11 @@ export const environment = {
   // Ynov
   // apiURL: "http://10.13.33.61:1337" 
   // Trets
-  apiURL: "http://176.181.188.13:1337"
+  // apiURL: "http://176.181.188.13:1337"
   // Local
   // apiURL: "http://localhost:1337"
+  // Local +partage
+  apiURL: "http://192.168.1.10:1337"
 };
 
 /*

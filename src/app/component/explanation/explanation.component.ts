@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Explanation } from 'src/app/model/explanation/explanation';
-import { ExplanationsService } from 'src/app/services/explanation/explanation.service';
+import { ExplanationsService } from 'src/app/services/explanationService/explanation.service';
 
 @Component({
   selector: 'app-explanation',

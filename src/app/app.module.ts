@@ -15,6 +15,8 @@ import { ExplanationComponent } from './component/explanation/explanation.compon
 import { CouteauComponent } from './pages/couteau/couteau.component';
 import { CouteauListComponent } from './pages/couteau-list/couteau-list.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,9 @@ import { ContactComponent } from './pages/contact/contact.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

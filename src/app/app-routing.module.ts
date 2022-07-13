@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: "couteau/:id", component: CouteauComponent},
   { path: "couteaux", component: CouteauListComponent},
   { path: "contact", component: ContactComponent},
+  { path: "contact/:id", component: ContactComponent},
   { path: "**", redirectTo: "guitares"},
 ];
 
