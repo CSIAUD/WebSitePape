@@ -1,6 +1,6 @@
 <main class="mt-20 text-xl font-roboto">
     <ul class="flex flex-col items-center gap-10">
-        <li *ngFor="let explanation of explanations" id="exp{{explanation.id}}" class="flex flex-col items-center w-16/20 gap-5">
+        <li *ngFor="let explanation of explanations" class="flex flex-col items-center w-16/20 gap-5">
             <hr class="border-black border-top-2 w-full">
             <h1 class="text-5xl font-serif">{{explanation.title}}</h1>
             <ul *ngIf="explanation.images.length">
@@ -9,7 +9,7 @@
                 </li>
             </ul>
             <p class="text-justify">{{explanation.text}}</p>
-            <a *ngIf="explanation.contact" class="nm-flat-brown-sm text-2xl font-roboto px-3 py-1 rounded-lg">Demander un Devis</a>
+            <a *ngIf="explanation.contact" routerLink="/contact/{{explanation.id}}" class="nm-flat-brown-sm text-2xl font-roboto px-3 py-1 rounded-lg">Demander un Devis</a>
         </li>
     </ul>
 </main>

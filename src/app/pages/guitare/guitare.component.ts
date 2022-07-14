@@ -17,11 +17,6 @@ export class GuitareComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = parseInt(this.route.snapshot.paramMap.get('id') || "1")
-    this.getOne();
-  }
-
-  getOne(){
     this.guitare = this.guitareService.findOne(this.id);
   }
-
 }
