@@ -13,7 +13,9 @@ export const environment = {
   // Local
   // apiURL: "http://localhost:1337"
   // Local +partage
-  apiURL: "http://192.168.1.10:1337"
+  // apiURL: "http://192.168.1.10:1337"
+  // Brial
+  apiURL: "http://brial.freeboxos.fr:28037"
 };
 
 /*
