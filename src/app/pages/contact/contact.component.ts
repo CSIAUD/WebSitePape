@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { Sujet } from 'src/app/model/sujet/sujet';
 import { ExplanationsService } from 'src/app/services/explanationService/explanation.service';
@@ -27,8 +28,11 @@ const headers = {
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  id = 0;
   title = 'Papecaster';
   error = null;
+  init = true;
+  selectedOption: any;
   data;
 
   public subjects: Sujet [] = [];
@@ -36,7 +40,8 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private explanationService:ExplanationsService
+    private explanationService:ExplanationsService,
+    private route: ActivatedRoute
   ) {
     this.data = this.formBuilder.group({
       title: ['', Validators.required],
@@ -50,8 +55,21 @@ export class ContactComponent implements OnInit {
   }
   // constructor(private sujetService:SujetService, private route: ActivatedRoute) {}
 
+  ngAfterViewInit(): void {
+    if(this.init){
+      this.init = false;
+      if(this.id > 0){
+        console.log("ID")
+        setTimeout(() => {
+          this.selectedOption = this.id;
+        }, 500);
+      }
+    }
+  }
+
   ngOnInit(): void {
     this.subjects = this.explanationService.getSubjects();
+    this.id = parseInt(this.route.snapshot.paramMap.get('id') || "0");
   }
 
   public validateForm(ev: Event){
@@ -185,4 +203,19 @@ function resetForm(){
   if(display){
     display.textContent = "0";
   }
+}
+
+function initSelect(id: number){
+  let options = document.querySelectorAll("select option");
+  
+  options.forEach(option => {
+    let elem = option as HTMLInputElement;
+    console.log(elem.value == String(id));
+    if(elem.value == String(id)){
+      console.log("selected")
+      elem.setAttribute("selected", "");
+    }else{
+      elem.removeAttribute("selected");
+    }
+  });
 }

@@ -18,8 +18,8 @@
             </div>
             <label for="">Sujet : <span class="text-red-500">*</span></label>
             <div>
-                <select required formControlName="explanation" (change)="validateForm($event)" class="w-full rounded-lg border-2 border-black px-2 py-1 capitalize" data-validate="false">
-                    <option selected disabled>--- Choisissez un Sujet ---</option>
+                <select required formControlName="explanation" [(ngModel)]="selectedOption" (change)="validateForm($event)" class="w-full rounded-lg border-2 border-black px-2 py-1 capitalize" data-validate="false">
+                    <option selected disabled value="undefined">--- Choisissez un Sujet ---</option>
                     <option *ngFor="let subject of subjects" value="{{subject.id}}" class="capitalize">{{subject.title}}</option>
                 </select>
             </div>
