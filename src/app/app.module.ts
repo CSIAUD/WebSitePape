@@ -14,6 +14,7 @@ import { SafePipe } from './pipes/safe/safe.pipe';
 import { ExplanationComponent } from './component/explanation/explanation.component';
 import { CouteauComponent } from './pages/couteau/couteau.component';
 import { CouteauListComponent } from './pages/couteau-list/couteau-list.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CouteauListComponent } from './pages/couteau-list/couteau-list.componen
     SafePipe,
     ExplanationComponent,
     CouteauComponent,
-    CouteauListComponent
+    CouteauListComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
