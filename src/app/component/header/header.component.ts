@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Link } from 'src/app/model/link/link';
 
 @Component({
-  selector: 'app-header',
+  selector: 'comp-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })

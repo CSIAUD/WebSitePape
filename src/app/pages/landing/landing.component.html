@@ -1,1 +1,5 @@
-<p>landing works!</p>
+<main class="w-full mt-20 flex flex-col gap-y-10">
+    <comp-caroussel [imgs]="landing.imgs" sens="accueil" class="block w-full mx-auto"></comp-caroussel>
+    <h1 class="text-center text-5xl font-serif px-10">{{landing.title | formatting}}</h1>
+    <p>{{landing.text}}</p>
+</main>
