@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   ratioVertical: 8/5,
   ratioHorizontal: 3/4,
+  ratioAccueil: 1/2,
   // Ynov
   // apiURL: "http://10.13.33.61:1337" 
   // Trets

@@ -14,9 +14,11 @@ import { SafePipe } from './pipes/safe/safe.pipe';
 import { ExplanationComponent } from './component/explanation/explanation.component';
 import { CouteauComponent } from './pages/couteau/couteau.component';
 import { CouteauListComponent } from './pages/couteau-list/couteau-list.component';
+import { LandingComponent } from './pages/landing/landing.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CarousselComponent } from './component/caroussel/caroussel.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     ExplanationComponent,
     CouteauComponent,
     CouteauListComponent,
-    ContactComponent
+    LandingComponent,
+    ContactComponent,
+    CarousselComponent
   ],
   imports: [
     BrowserModule,

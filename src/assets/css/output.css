@@ -464,6 +464,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.left-0 {
+  left: 0px;
+}
+
+.left-full {
+  left: 100%;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -472,12 +480,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0px;
 }
 
-.-left-2 {
-  left: -0.5rem;
+.-left-full {
+  left: -100%;
 }
 
-.left-0 {
-  left: 0px;
+.-left-2 {
+  left: -0.5rem;
 }
 
 .top-20 {
@@ -488,14 +496,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: -2rem;
 }
 
-.left-full {
-  left: 100%;
-}
-
-.-left-full {
-  left: -100%;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -504,14 +504,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mt-20 {
@@ -550,16 +550,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-10 {
   height: 2.5rem;
 }
 
 .h-20 {
   height: 5rem;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-menuMobile {
@@ -570,20 +570,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2rem;
 }
 
-.h-52 {
-  height: 13rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
 
-.w-16\/20 {
-  width: 80%;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-16\/20 {
+  width: 80%;
 }
 
 .w-screen {
@@ -704,12 +700,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 0.5rem;
 }
 
+.gap-y-10 {
+  row-gap: 2.5rem;
+}
+
 .self-center {
   align-self: center;
 }
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.whitespace-pre {
+  white-space: pre;
 }
 
 .rounded-lg {
@@ -788,6 +792,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pl-12 {
@@ -897,12 +911,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.duration-300 {
-  transition-duration: 300ms;
-}
-
 .duration-1000 {
   transition-duration: 1000ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .ease-linear {

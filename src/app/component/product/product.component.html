@@ -1,12 +1,6 @@
 <main class="mt-20 p-3 pt-8 flex flex-col gap-y-5 w-full font-serif text-xl">
     <h1 class="text-brown text-center text-5xl">{{product.title}}</h1>
-    <div id="caroussel" class="caroussel w-14/20 mx-auto relative overflow-hidden" data-nb="0">
-        <!-- h-52 -->
-        
-        <img *ngFor="let img of product.images; let isFirst = first" src="{{img}}" alt="" class="h-full absolute {{isFirst ? 'left-0' : 'left-full'}} duration-1000 m-auto top-0 bottom-0">
-        <!-- <img src="{{apiURL}}/uploads/small_Couteau_Skog_Acceuil_845x575_dc8ce1efb8.jpg" alt="" class="w-full absolute left-0 duration-1000">
-        <img src="{{apiURL}}/uploads/small_2_7_cee4d7128a.jpg" alt="" class="w-full absolute left-full  duration-1000"> -->
-    </div>
+    <comp-caroussel [imgs]="product.images" [sens]="sens" class="w-14/20 mx-auto"></comp-caroussel>
     <div *ngIf="product.description">
         <p>{{product.description}}</p>
     </div>

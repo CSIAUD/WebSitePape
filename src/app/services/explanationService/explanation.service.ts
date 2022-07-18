@@ -63,6 +63,47 @@ export class ExplanationsService {
     return explanations;
   }
 
+  public getAccueil(): Explanation[] {
+    let explanations: Array<Explanation> = [];
+
+    try {
+      fetch(`${this.explanationUrl}?filters[accueil][$eq]=true&populate=*`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then((val) => {
+          for(let item of val.data){
+            let itemTemp = new Explanation;
+            itemTemp.id = item['id'];
+            item = item['attributes'];
+            itemTemp.title = item['title'] + " de " + item['page'];
+            itemTemp.page = item['page'];
+            itemTemp.text = item['text'];
+            itemTemp.contact = item['contact'];
+            for(let img of item['images'].data){
+              let src = '';
+              if(img['attributes']['formats']['small'] != null){
+                src = img['attributes']['formats']['small']['url'];
+              }else{
+                src = img['attributes']['formats']['thumbnail']['url'];
+              }
+              itemTemp.images.push(environment.apiURL + src)
+            }
+            explanations.push(itemTemp);
+          }
+          return explanations;
+        });
+    } catch (error) {
+      console.log("Erreur fetch")
+      // this.error = error;
+    }
+    return explanations;
+  }
+
   public getLinks(page: string): Link[] {
     let links: Array<Link> = [];
 
@@ -96,7 +137,7 @@ export class ExplanationsService {
     let links: Array<Sujet> = [];
 
     try {
-      fetch(`${this.explanationUrl}?filters[page][$ne]=accueil&fields[0]=id&fields[1]=title&fields[2]=page`, {
+      fetch(`${this.explanationUrl}?filters[contact][$eq]=true&fields[0]=id&fields[1]=title&fields[2]=page`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
