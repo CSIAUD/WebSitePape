@@ -1,0 +1,3 @@
+main > div:first-of-type > hr{
+    display: none;
+}

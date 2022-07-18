@@ -614,6 +614,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 45%;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
+.w-max {
+  width: max-content;
+}
+
 .origin-center {
   transform-origin: center;
 }
@@ -728,6 +736,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -802,6 +814,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pl-12 {
@@ -936,6 +963,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .nm-flat-brown {
   background: #B58860;
   box-shadow: 0.2em 0.2em calc(0.2em * 2) #8E6642, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #C7A486;
+}
+
+.first\:hidden:first-child {
+  display: none;
 }
 
 .even\:bg-white:nth-child(even) {
