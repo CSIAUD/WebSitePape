@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ConditionsComponent } from './pages/conditions/conditions.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CouteauListComponent } from './pages/couteau-list/couteau-list.component';
 import { CouteauComponent } from './pages/couteau/couteau.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent},
   { path: "contact/:id", component: ContactComponent},
   { path: "links", component: LinksComponent},
+  { path: "cgv", component: ConditionsComponent},
   { path: "**", redirectTo: "landing"},
 ];
 
