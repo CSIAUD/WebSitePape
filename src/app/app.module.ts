@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarousselComponent } from './component/caroussel/caroussel.component';
 import { LinksComponent } from './pages/links/links.component';
+import { ConditionsComponent } from './pages/conditions/conditions.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LinksComponent } from './pages/links/links.component';
     LandingComponent,
     ContactComponent,
     CarousselComponent,
-    LinksComponent
+    LinksComponent,
+    ConditionsComponent
   ],
   imports: [
     BrowserModule,
