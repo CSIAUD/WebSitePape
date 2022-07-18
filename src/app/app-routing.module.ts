@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: "couteaux", component: CouteauListComponent},
   { path: "contact", component: ContactComponent},
   { path: "contact/:id", component: ContactComponent},
-  { path: "**", redirectTo: "guitares"},
+  { path: "**", redirectTo: "landing"},
 ];
 
 @NgModule({

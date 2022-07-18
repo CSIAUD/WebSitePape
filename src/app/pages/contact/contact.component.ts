@@ -167,6 +167,7 @@ function formIsValid(form: HTMLFormElement){
 }
 
 function checkResponse(data: any){
+  console.log(data)
   if(data.error){
     let errors = data.error.details.errors;
     let nbErrors = errors.length;
@@ -203,19 +204,4 @@ function resetForm(){
   if(display){
     display.textContent = "0";
   }
-}
-
-function initSelect(id: number){
-  let options = document.querySelectorAll("select option");
-  
-  options.forEach(option => {
-    let elem = option as HTMLInputElement;
-    console.log(elem.value == String(id));
-    if(elem.value == String(id)){
-      console.log("selected")
-      elem.setAttribute("selected", "");
-    }else{
-      elem.removeAttribute("selected");
-    }
-  });
 }

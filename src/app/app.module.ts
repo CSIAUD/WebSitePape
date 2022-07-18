@@ -19,7 +19,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarousselComponent } from './component/caroussel/caroussel.component';
-import { FormattingPipe } from './pipes/formatting/formatting.pipe';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,7 @@ import { FormattingPipe } from './pipes/formatting/formatting.pipe';
     CouteauListComponent,
     LandingComponent,
     ContactComponent,
-    CarousselComponent,
-    FormattingPipe
+    CarousselComponent
   ],
   imports: [
     BrowserModule,

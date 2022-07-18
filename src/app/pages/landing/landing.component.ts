@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Explanation } from 'src/app/model/explanation/explanation';
 import { Landing } from 'src/app/model/landing/landing';
+import { ExplanationsService } from 'src/app/services/explanationService/explanation.service';
 import { LandingService } from 'src/app/services/landingService/landing.service';
 
 @Component({
@@ -9,12 +11,13 @@ import { LandingService } from 'src/app/services/landingService/landing.service'
 })
 export class LandingComponent implements OnInit {
   landing = new Landing;
+  public explanations: Explanation [] = [];
+  accueil = true;
 
-  constructor(private landingService: LandingService) { }
+  constructor(private landingService: LandingService, private explanationService: ExplanationsService) { }
 
   ngOnInit(): void {
     this.landing = this.landingService.get();
-    
+    this.explanations = this.explanationService.getAccueil();
   }
-
 }

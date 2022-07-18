@@ -2,14 +2,15 @@
     <ul class="flex flex-col items-center gap-10">
         <li *ngFor="let explanation of explanations" class="flex flex-col items-center w-16/20 gap-5">
             <hr class="border-black border-top-2 w-full">
-            <h1 class="text-5xl font-serif">{{explanation.title}}</h1>
+            <h1 class="text-5xl font-serif text-center">{{explanation.title}}</h1>
             <ul *ngIf="explanation.images.length">
                 <li *ngFor="let item of explanation.images" class="first-of-type:block hidden w-screen">
                     <img class="w-full" src="{{item}}">
                 </li>
             </ul>
             <p class="text-justify">{{explanation.text}}</p>
-            <a *ngIf="explanation.contact" routerLink="/contact/{{explanation.id}}" class="nm-flat-brown-sm text-2xl font-roboto px-3 py-1 rounded-lg">Demander un Devis</a>
+            <a *ngIf="explanation.contact && !accueil" routerLink="/contact/{{explanation.id}}" class="nm-flat-brown-sm text-2xl font-roboto px-3 py-1 rounded-lg">Me Contacter</a>
+            <a *ngIf="accueil" (click)="redirect(explanation.page)" class="cursor-pointer nm-flat-brown-sm text-2xl font-roboto px-3 py-1 rounded-lg">Voir +</a>
         </li>
     </ul>
 </main>

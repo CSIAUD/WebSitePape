@@ -36,10 +36,8 @@ export class LandingService {
           let elem = val.data
           landing.id = elem['id']
           elem = elem['attributes']
-          // landing.text = elem['text']
-          // landing.title = elem['title']
-          landing.text = transform(elem['text'])
-          landing.title = transform(elem['title'])
+          landing.text = elem['text']
+          landing.title = elem['title']
           for (let img of val['data']['attributes']['imgs']['data']) {
             let imgUrl = img['attributes']['formats']['small'] != undefined ? img['attributes']['formats']['small']['url'] : img['attributes']['formats']['thumbnail']['url']
             landing.imgs.push(environment.apiURL + imgUrl);
@@ -52,8 +50,4 @@ export class LandingService {
     }
     return landing;
   }
-}
-
-function transform(str: string): string{
-  return (str.split("\n")).join("<br>");
 }
