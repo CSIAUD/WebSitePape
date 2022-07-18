@@ -6,6 +6,7 @@ import { CouteauComponent } from './pages/couteau/couteau.component';
 import { GuitareListComponent } from './pages/guitare-list/guitare-list.component';
 import { GuitareComponent } from './pages/guitare/guitare.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { LinksComponent } from './pages/links/links.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "landing", pathMatch: "full"},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: "couteaux", component: CouteauListComponent},
   { path: "contact", component: ContactComponent},
   { path: "contact/:id", component: ContactComponent},
+  { path: "links", component: LinksComponent},
   { path: "**", redirectTo: "landing"},
 ];
 
