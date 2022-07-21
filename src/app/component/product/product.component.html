@@ -1,5 +1,5 @@
 <main class="mt-20 p-3 pt-8 flex flex-col gap-y-5 w-full font-serif text-xl">
-    <h1 class="text-brown text-center text-5xl">{{product.title}}</h1>
+    <h1 class="text-center text-5xl">{{product.title}}</h1>
     <comp-caroussel [imgs]="product.images" [sens]="sens" class="w-14/20 mx-auto"></comp-caroussel>
     <div *ngIf="product.description">
         <p>{{product.description}}</p>
@@ -11,10 +11,10 @@
     
     <div *ngIf="product.caracteristics" class="w-full">
         <h2 class="text-center mb-4">Caractéristiques :</h2>
-        <table class="mx-auto w-18/20">
-            <tr *ngFor="let caracteristic of product.caracteristics" class="bg-blue-200 even:bg-white w-full">
-                <td class="text-left">{{caracteristic.name}}</td>
-                <td class="text-right">{{caracteristic.value}}</td>
+        <table class="mx-auto w-18/20 text-black">
+            <tr *ngFor="let caracteristic of product.caracteristics" class="bg-green-200 even:bg-gray-100 w-full">
+                <td class="text-left pl-2 py-1">{{caracteristic.name}}</td>
+                <td class="text-right pr-2 py-1">{{caracteristic.value}}</td>
             </tr>
         </table>
     </div>

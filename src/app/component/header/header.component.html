@@ -1,11 +1,11 @@
 <header>
-    <nav class="w-screen h-20 fixed top-0 z-50 text-black shadow-lg bg-brown" id="nav">
-        <div class="flex flex-row justify-between items-center p-4 relative h-full">
+    <nav class="w-screen h-20 fixed top-0 z-50 text-black shadow-lg bg-[url('src/assets/imgs/fond.jpg')] bg-cover bg-bottom" id="nav">
+        <div class="flex flex-row justify-between items-center p-2 relative h-full">
             <a class="w-full block cursor-pointer" routerLink="/" class="h-full">
                 <img class="h-full" src="/assets/imgs/logo white.png" alt="" id="logo" routerLink="'/'">
             </a>
             <!-- Menu mobile -->
-            <svg id="burger" viewBox="0 0 100 100" data-status="close" class="h-full p-2" (click)="toggleMenu()">
+            <svg id="burger" viewBox="0 0 100 100" data-status="close" class="h-full p-4 text-white" (click)="toggleMenu()">
                 <circle cx="10" cy="10" r="10" fill="CurrentColor" />
                 <rect class="origin-tRect" id="tRect" x="10" y="0" width="80" height="20" transform="rotate(0)" fill="CurrentColor" />
                 <circle id="trC" cx="90" cy="10" r="10" fill="CurrentColor" />
@@ -53,7 +53,7 @@
                 keyTimes="0;0.6;1"/>
             </svg>
         
-            <div id="menu" class="flex rotate-0 absolute bg-white text-black w-screen left-0 top-20 h-menuMobile capitalize text-3xl font-roboto pl-10 p-2 pt-5 flex-col gap-4">
+            <div id="menu" class="flex rotate-0 absolute bg-gray-900 text-gray-200 w-screen left-0 top-20 h-menuMobile capitalize text-3xl font-roboto pl-10 p-2 pt-5 flex-col gap-4">
                 <a class="w-full block cursor-pointer" routerLink='/landing'>accueil</a>
                 <a class="w-full block cursor-pointer" routerLink="/guitares">guitares</a>
                 <a class="w-full block cursor-pointer" routerLink="/couteaux">coutellerie</a>

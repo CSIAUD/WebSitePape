@@ -1,10 +1,10 @@
-<main class="flex flex-col gap-y-5 mt-20 pt-8">
+<main class="flex flex-col gap-y-5 mt-20 pt-8 pb-5">
     <h1 class="text-center text-5xl font-serif text-brown">Liens</h1>
     <div *ngFor="let link of links" class="flex flex-col gap-y-5 w-18/20 mx-auto">
-        <hr class="w-16/20 border-black border-top-2 mx-auto">
+        <hr class="w-16/20 border-gray-200 border-top-2 mx-auto">
         <img src="{{link.img}}" alt="">
         <h2 class="text-center text-4xl">{{link.title}}</h2>
         <p class="text-xl text-justify">{{link.text}}</p>
-        <a href="{{link.url}}" target="_blank" class="px-6 py-2 bg-brown rounded-lg w-max mx-auto">Visiter le site</a>
+        <a href="{{link.url}}" target="_blank" class="px-6 py-2 bg-green-600 rounded-lg w-max mx-auto">Visiter le site</a>
     </div>
 </main>

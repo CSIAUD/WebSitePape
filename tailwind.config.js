@@ -20,7 +20,6 @@ module.exports = {
       },
       colors: {
         'brown': "rgb(181,136,96 )",
-        'green': "rgb(99, 181,96 )",
       },
       spacing:{
         '1/20': "5%",

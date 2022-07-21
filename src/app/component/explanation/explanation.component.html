@@ -1,7 +1,7 @@
-<main class="mt-20 text-xl font-roboto">
+<article class="mt-20 pb-5 text-xl font-roboto">
     <ul class="flex flex-col items-center gap-10">
         <li *ngFor="let explanation of explanations" class="flex flex-col items-center w-16/20 gap-5">
-            <hr class="border-black border-top-2 w-full">
+            <hr class="border-gray-200 border-top-2 w-full">
             <h1 class="text-5xl font-serif text-center">{{explanation.title}}</h1>
             <ul *ngIf="explanation.images.length">
                 <li *ngFor="let item of explanation.images" class="first-of-type:block hidden w-screen">
@@ -9,8 +9,8 @@
                 </li>
             </ul>
             <p class="text-justify">{{explanation.text}}</p>
-            <a *ngIf="explanation.contact && !accueil" routerLink="/contact/{{explanation.id}}" class="nm-flat-brown-sm text-2xl font-roboto px-3 py-1 rounded-lg">Me Contacter</a>
-            <a *ngIf="accueil" (click)="redirect(explanation.page)" class="cursor-pointer nm-flat-brown-sm text-2xl font-roboto px-3 py-1 rounded-lg">Voir +</a>
+            <a *ngIf="explanation.contact && !accueil" routerLink="/contact/{{explanation.id}}" class="bg-green-600 text-2xl font-roboto px-3 py-1 rounded-lg">Me Contacter</a>
+            <a *ngIf="accueil" (click)="redirect(explanation.page)" class="cursor-pointer bg-green-600 text-2xl font-roboto px-3 py-1 rounded-lg">Voir +</a>
         </li>
     </ul>
-</main>
+</article>
